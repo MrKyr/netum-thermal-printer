@@ -17,6 +17,12 @@ Kyr Notes
   $ sudo make install
   ```
 
+* Set some custom options by default (*smaller printing text*)
+
+  ```
+  $ sudo lpadmin -p POS58 -o cpi-default=18 -o lpi-default=9
+  ```
+
 
 * Official [Drivers](https://gzxlscan.com/downloads/)
 

@@ -31,4 +31,4 @@ clean:
 
 uninstall:
 	rm -f /usr/libexec/cups/filter/rastertozj
-	rm -f /Library/Printers/PPDs/Contents/Resources/zj58.drv
+	rm -f /Library/Printers/PPDs/Contents/Resources/zj58.ppd
