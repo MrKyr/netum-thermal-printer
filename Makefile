@@ -21,8 +21,9 @@ ppd:
 	ppdc zj.drv
 
 install:
-	install -m 755 rastertozj $(DESTDIR)/usr/libexec/cups/filter/
-	install -m 644 ppd/zj58.ppd $(DESTDIR)/Library/Printers/PPDs/Contents/Resources/
+	install -m 755 rastertozj $(DESTDIR)/usr/lib/cups/filter/
+	mkdir -p $(DESTDIR)/usr/share/cups/model/zjiang
+	install -m 644 ppd/zj58.ppd $(DESTDIR)/usr/share/cups/model/zjiang/
 
 clean:
 	-rm -f rastertozj
@@ -30,5 +31,5 @@ clean:
 	-rm -rf ppd
 
 uninstall:
-	rm -f /usr/libexec/cups/filter/rastertozj
-	rm -f /Library/Printers/PPDs/Contents/Resources/zj58.ppd
+	rm -f /usr/lib/cups/filter/rastertozj
+	rm -f /usr/share/cups/model/zjiang
